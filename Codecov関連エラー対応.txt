@@ -1,0 +1,49 @@
+1.  If code coverage is unknown, and could not be updated.-----------------
+
+FYI
+https://docs.codecov.com/docs/commit-status#target
+????codecov.yml?????????workflow?????????
+
+put the following as codecov.yml in directly under .github folder.
+
+#----------------------------
+coverage:
+  status:
+    project:
+      default:
+        # basic
+        target: auto #default
+        threshold: 0%
+        base: auto 
+        flags: 
+          - unit
+        paths: 
+          - "src"
+       # advanced settings
+        branches: 
+          - master
+        if_ci_failed: error #success, failure, error, ignore
+        informational: false
+        only_pulls: false
+#----------------------------
+
+
+2. If code coverage is still not updated and kept old coverage rate.
+First, check the actions and workflow "Run codecov/codecov-action@v3"
+If there is an error here to upload test results to codecov, this is the cause.
+
+=> repository secrete is mistaken not include token. i.e., 
+not
+CODECOV_TOKEN=7237b1e1-2b47-4c95-8d49-0aa01db34859
+but
+7237b1e1-2b47-4c95-8d49-0aa01db34859
+
+also. adding following codes to CI.yml file is better to find error 
+	#--------------
+          name: updated-name # optional
+          token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+          fail_ci_if_error: true # optional (default = false)
+          verbose: true # optional (default = false)
+	#---------------
+
+NOTE: CI pass status is late to be updated. So, you should wait after the above problem.
