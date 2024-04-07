@@ -29,7 +29,7 @@ jobs:
             experimental:  #--this is added for avoiding error
               - false
             include:
-              - node-version: 20-nightly
+              - node-version: nightly
                 experimental: true # end
         os:
           - ubuntu-latest
