@@ -42,5 +42,3 @@ jobs:
       - uses: codecov/codecov-action@v3
         with:
           files: lcov.info
-
-CODECOV_TOKEN=db1a6188-d6e8-488d-8f46-6e24dec3dccd
