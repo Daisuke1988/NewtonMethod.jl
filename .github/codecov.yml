@@ -19,6 +19,3 @@ coverage:
 github_checks:
   annotations: true
 slack_app: true
-
-codecov:
-token: 7237b1e1-2b47-4c95-8d49-0aa01db34859
