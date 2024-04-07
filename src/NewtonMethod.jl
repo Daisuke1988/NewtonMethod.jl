@@ -53,7 +53,7 @@ module NewtonMethod
         # error-handling of x_0
         if isa(x_0, Real)
             x = x_0
-        elseif is(x_0, Nothing)
+        elseif isa(x_0, Nothing)
             x = rand()
         else
             println("x_0 is NOT real number. I replace it with random real number.")
