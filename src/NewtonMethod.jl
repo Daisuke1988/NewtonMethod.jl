@@ -1,4 +1,5 @@
 module NewtonMethod
+    # julia REPL で add Revise PkgTemplates を忘れないこと！
 
     # Newton 1
     using NLsolve, LinearAlgebra
