@@ -40,7 +40,7 @@ module NewtonMethod
     export newtonroot
 
     # for checking 
-    @show f(x) = 3x^3 + 2x^2 - 4x + 3
+    #@show f(x) = 3x^3 + 2x^2 - 4x + 3
     #@show f′(x) = 9x^2 + 4x -4
     #@show xsol = newtonroot(f, f′; x_0 = 0.0)
  
