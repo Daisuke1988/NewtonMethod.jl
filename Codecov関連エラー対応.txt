@@ -25,7 +25,11 @@ coverage:
         if_ci_failed: error #success, failure, error, ignore
         informational: false
         only_pulls: false
+
+codecov:
+token: XXXXXXXXXXXXXXXXXXXXXXXXXX
 #----------------------------
+XXXXXXXXX is copied from codecov website secrets.
 
 
 2. If code coverage is still not updated and kept old coverage rate.
