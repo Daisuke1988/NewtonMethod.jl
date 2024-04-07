@@ -26,6 +26,11 @@ jobs:
           - '1.10'
           - '1.9'
           - 'nightly'
+            experimental:  #--this is added for avoiding error
+              - false
+            include:
+              - node-version: 20-nightly
+                experimental: true # end
         os:
           - ubuntu-latest
         arch:
