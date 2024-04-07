@@ -47,4 +47,4 @@ using Test, LinearAlgebra
     f(x) = x^2 - 2x + 1
     xsol = newtonroot(f; x_0 = 100.0, tol = 1E-3)
     @test norm(xsol[1] - 1.0) >1E-4
-end
+end;
